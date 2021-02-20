@@ -713,7 +713,7 @@ const Slider = React.forwardRef(function Slider(props, ref) {
         }
 
         return (
-          <React.Fragment key={mark.value}>
+          <React.Fragment key={`mark-${mark.value}`}>
             <span
               style={style}
               data-index={index}
@@ -742,7 +742,7 @@ const Slider = React.forwardRef(function Slider(props, ref) {
 
         return (
           <ValueLabelComponent
-            key={index}
+            key={`label-${index}`}
             valueLabelFormat={valueLabelFormat}
             valueLabelDisplay={valueLabelDisplay}
             className={classes.valueLabel}
